@@ -1,7 +1,7 @@
 {
   "name": "zachflower/indefinite-article",
   "description": "Library for programmatically determining the appropriate indefinite article to use (a/an)",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "authors": [
     {
       "name": "Zachary Flower",
