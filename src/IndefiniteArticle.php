@@ -27,7 +27,7 @@ class IndefiniteArticle
         ['/^e[uw]/i', 1],
         ["/^onc?e\b/i", 1],
         ['/^uni([^nmd]|mo)/i', 1],
-        ['/^ut[th]/i', 2],
+        ['/^ut[th]/i', 0],
         ['/^u[bcfhjkqrst][aeiou]/i', 1],
         // special capitals
         ['/^U[NK][AIEO]?/', 1],
