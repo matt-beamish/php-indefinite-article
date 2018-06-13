@@ -2,7 +2,7 @@
 
 use IndefiniteArticle\IndefiniteArticle;
 
-class IndefiniteArticleTest extends PHPUnit_Framework_TestCase {
+class IndefiniteArticleTest extends PHPUnit\Framework\TestCase {
 
   /**
    * Numbers
