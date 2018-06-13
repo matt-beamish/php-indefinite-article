@@ -1,8 +1,9 @@
-<?php namespace IndefiniteArticle;
+<?php
+
+namespace IndefiniteArticle;
 
 class IndefiniteArticle
 {
-
     private static $rules = [
         // any number starting with an '8' uses 'an'
         ["/^[8](\d+)?/", 0],
@@ -92,7 +93,7 @@ class IndefiniteArticle
         foreach (self::$rules as $rule) {
             [$pattern, $article] = $rule;
             if (\preg_match($pattern, $word)) {
-                return ( $article ? 'a' : 'an') . ' ' . $word;
+                return ($article ? 'a' : 'an') . ' ' . $word;
             }
         }
 
