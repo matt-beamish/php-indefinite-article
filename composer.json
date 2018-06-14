@@ -6,7 +6,7 @@
     {
       "name": "Spenser Hale",
       "email": "spenserhaledeveloper@outlook.com"
-    },
+    }
   ],
   "autoload": {
     "psr-4": {
