@@ -9,13 +9,13 @@ PHP implementation of the [Lingua::EN::Inflect](http://search.cpan.org/dist/Ling
 Require the library and update via [Composer](https://getcomposer.org/):
 
 ```
-composer require zachflower/indefinite-article
+composer require spenserhale/indefinite-article
 composer update
 ```
 
 ### Manually
 
-Download the [latest release](https://github.com/zachflower/php-indefinite-article/archive/master.zip), extract into a directory called `indefinite-article`, and include the library at the beginning of your script:
+Download the [latest release](https://github.com/spenserhale/php-indefinite-article/archive/master.zip), extract into a directory called `indefinite-article`, and include the library at the beginning of your script:
 
 ```
 include_once('./indefinite-articles/src/IndefiniteArticle.php');
@@ -38,4 +38,4 @@ an elephant
 
 ## Copyright and License
 
-Original Perl module Copyright &copy; 1997-2009 Damian Conway; Original PHP port Copyright &copy; 2012 Niko Salminen; Current library copyright &copy; 2016 Zachary Flower; Code released under the [BSD license](LICENSE).
+Original Perl module Copyright &copy; 1997-2009 Damian Conway; Original PHP port Copyright &copy; 2012 Niko Salminen; Original library copyright &copy; 2016 Zachary Flower; Current library copyright &copy; 2018 Spenser Hale; Code released under the [BSD license](LICENSE).
