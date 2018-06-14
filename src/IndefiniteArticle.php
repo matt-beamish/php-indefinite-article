@@ -4,59 +4,51 @@ namespace IndefiniteArticle;
 
 class IndefiniteArticle
 {
+    private const A = 'a';
+
+    private const AN = 'an';
+
     private static $rules = [
         // any number starting with an '8' uses 'an'
-        ["/^[8](\d+)?/", 0],
+        ["/^[8](\d+)?/", self::AN],
         // ordinal forms
-        ['/^([bcdgjkpqtuvwyz]-?th)/i', 1],
-        ['/^([aefhilmnorsx]-?th)/i', 0],
+        ['/^([bcdgjkpqtuvwyz]-?th)/i', self::A],
+        ['/^([aefhilmnorsx]-?th)/i', self::AN],
         // special cases
-        ['/^(euler|hour(?!i)|heir|honest|hono)/i', 0],
-        ['/^[aefhilmnorsx]$/i', 0],
-        ['/^[bcdgjkpqtuvwyz]$/i', 1],
+        ['/^(euler|hour(?!i)|heir|honest|hono)/i', self::AN],
+        ['/^[aefhilmnorsx]$/i', self::AN],
+        ['/^[bcdgjkpqtuvwyz]$/i', self::A],
         // abbreviations
         [
             '/^((?! FJO | [HLMNS]Y.  | RY[EO] | SQU | ( F[LR]? | [HL] | MN? | N | RH? | S[CHKLMNPTVW]? | X(YL)?) [AEIOU]) [FHLMNRSX][A-Z])/x',
-            0
+            self::AN
         ],
-        ['/^[aefhilmnorsx][.-]/i', 0],
-        ['/^[a-z][.-]/i', 1],
+        ['/^[aefhilmnorsx][.-]/i', self::AN],
+        ['/^[a-z][.-]/i', self::A],
         // consonants
-        ['/^[^aeiouy]/i', 1],
+        ['/^[^aeiouy]/i', self::A],
         // special vowel forms
-        ['/^e[uw]/i', 1],
-        ["/^onc?e\b/i", 1],
-        ['/^uni([^nmd]|mo)/i', 1],
-        ['/^ut[th]/i', 0],
-        ['/^u[bcfhjkqrst][aeiou]/i', 1],
+        ['/^e[uw]/i', self::A],
+        ["/^onc?e\b/i", self::A],
+        ['/^uni([^nmd]|mo)/i', self::A],
+        ['/^ut[th]/i', self::AN],
+        ['/^u[bcfhjkqrst][aeiou]/i', self::A],
         // special capitals
-        ['/^U[NK][AIEO]?/', 1],
+        ['/^U[NK][AIEO]?/', self::A],
         // vowels
-        ['/^[aeiou]/i', 0],
+        ['/^[aeiou]/i', self::AN],
         // before certain consonants, y implies an "i" sound
-        ['/^(y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt))/i', 0],
+        ['/^(y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt))/i', self::AN],
     ];
-
-    /**
-     * Alias of the A() static method
-     *
-     * @param string $input
-     *
-     * @return string
-     */
-    public static function An(string $input): string
-    {
-        return self::A($input);
-    }
 
     /**
      * Determine appropriate indefinite article
      *
      * @param  string $input A word or phrase
      *
-     * @return string        Original word or phrase prefixed with 'a' or 'an'
+     * @return string Original word or phrase prefixed with 'a' or 'an'
      */
-    public static function A(string $input): string
+    public static function invoke(string $input): string
     {
         $matches = array();
 
@@ -86,18 +78,18 @@ class IndefiniteArticle
         // 3, 6, 9, … digits after the 11 or 18
         if (\preg_match("/^[1][1](\d+)?/", $word) || \preg_match("/^[1][8](\d+)?/", $word)) {
             if (\strlen(\preg_replace(array("/\s/", '/,/', "/\.(\d+)?/"), '', $word)) % 3 === 2) {
-                return 'an' . ' ' . $word;
+                return self::AN . ' ' . $word;
             }
         }
 
         foreach (self::$rules as $rule) {
             [$pattern, $article] = $rule;
             if (\preg_match($pattern, $word)) {
-                return ($article ? 'a' : 'an') . ' ' . $word;
+                return $article . ' ' . $word;
             }
         }
 
         // not sure, so guess 'a'
-        return 'a' . ' ' . $word;
+        return self::A . ' ' . $word;
     }
 }

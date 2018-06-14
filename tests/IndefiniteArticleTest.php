@@ -169,12 +169,8 @@ class IndefiniteArticleTest extends PHPUnit\Framework\TestCase
     {
         foreach ($cases as $case => $prefix) {
             // ensure that the expected prefix is added to the original case
-            $a = IndefiniteArticle::A($case);
+            $a = IndefiniteArticle::invoke($case);
             $this->assertEquals($prefix . ' ' . $case, $a);
-
-            // make sure A() and An() return the same response
-            $an = IndefiniteArticle::An($case);
-            $this->assertEquals($a, $an);
         }
     }
 }
