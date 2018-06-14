@@ -1,10 +1,15 @@
 # PHP Indefinite Article Library
 
-PHP implementation of the [Lingua::EN::Inflect](http://search.cpan.org/dist/Lingua-EN-Inflect/lib/Lingua/EN/Inflect.pm) Perl module's A() and AN() subroutines, originally [ported to PHP](https://github.com/Kaivosukeltaja/php-indefinite-article) by [Niko Salminen](http://nikosalminen.com).
+PHP implementation of the [Lingua::EN::Inflect](http://search.cpan.org/dist/Lingua-EN-Inflect/lib/Lingua/EN/Inflect.pm) 
+Perl module's A() and AN() subroutines, 
+originally [ported to PHP](https://github.com/Kaivosukeltaja/php-indefinite-article) by [Niko Salminen](http://nikosalminen.com),
+and then by [make into composer package](https://github.com/zachflower/php-indefinite-article) by [Zach Flower](https://zacharyflower.com/).
 
 ## Installation
 
 ### Via Composer
+
+@TODO needs to be uploaded to composer.
 
 Require the library and update via [Composer](https://getcomposer.org/):
 
