@@ -9,8 +9,6 @@ and then by [make into composer package](https://github.com/zachflower/php-indef
 
 ### Via Composer
 
-@TODO needs to be uploaded to composer.
-
 Require the library and update via [Composer](https://getcomposer.org/):
 
 ```

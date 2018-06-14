@@ -1,6 +1,11 @@
 {
   "name": "spenserhale/indefinite-article",
-  "description": "Library for programmatically determining the appropriate indefinite article to use (a/an)",
+  "description":"Grammatical utility class for prepending the appropriate indefinite article to a word (a/an)",
+  "keywords":[
+    "php",
+    "grammar",
+    "text"
+  ],
   "license": "BSD-2-Clause",
   "authors": [
     {
