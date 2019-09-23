@@ -4,9 +4,9 @@ namespace IndefiniteArticle;
 
 class IndefiniteArticle
 {
-    private const A = 'a';
+    const A = 'a';
 
-    private const AN = 'an';
+    const AN = 'an';
 
     private static $rules = [
         // any number starting with an '8' uses 'an'
@@ -54,7 +54,7 @@ class IndefiniteArticle
 
         \preg_match("/\A(\s*)(?:an?\s+)?(.+?)(\s*)\Z/i", $input, $matches);
 
-        [, $pre, $word, $post] = $matches;
+        list(, $pre, $word, $post) = $matches;
 
         if (\null === $word) {
             return $input;
@@ -83,7 +83,7 @@ class IndefiniteArticle
         }
 
         foreach (self::$rules as $rule) {
-            [$pattern, $article] = $rule;
+            list($pattern, $article) = $rule;
             if (\preg_match($pattern, $word)) {
                 return $article . ' ' . $word;
             }

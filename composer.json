@@ -1,5 +1,5 @@
 {
-  "name": "spenserhale/indefinite-article",
+  "name": "bmstanley/indefinite-article",
   "description":"Grammatical utility class for prepending the appropriate indefinite article to a word (a/an)",
   "keywords":[
     "php",
@@ -9,8 +9,8 @@
   "license": "BSD-2-Clause",
   "authors": [
     {
-      "name": "Spenser Hale",
-      "email": "spenserhaledeveloper@outlook.com"
+      "name": "Brian Stanley",
+      "email": "bmstanley87@gmail.com"
     }
   ],
   "autoload": {
@@ -19,10 +19,10 @@
     }
   },
   "require": {
-    "php": ">= 7.2.2"
+    "php": ">= 7.0"
   },
   "require-dev": {
     "nilportugues/php_backslasher": "^1.1",
-    "phpunit/phpunit": "^7.2"
+    "phpunit/phpunit": "~6.0"
   }
 }
