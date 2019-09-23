@@ -15,7 +15,7 @@ class IndefiniteArticle
         ['/^([bcdgjkpqtuvwyz]-?th)/i', self::A],
         ['/^([aefhilmnorsx]-?th)/i', self::AN],
         // special cases
-        ['/^(euler|hour(?!i)|heir|honest|hono)/i', self::AN],
+        ['/^(euler|hour(?!i)|heir|herb|honest|hono)/i', self::AN],
         ['/^[aefhilmnorsx]$/i', self::AN],
         ['/^[bcdgjkpqtuvwyz]$/i', self::A],
         // abbreviations
