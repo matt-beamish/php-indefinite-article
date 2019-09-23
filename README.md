@@ -9,21 +9,11 @@ and then by [made into composer package](https://github.com/zachflower/php-indef
 
 ### Via Composer
 
-Add the library to your `Composer.json` file
-
+Require the library and update via [Composer](https://getcomposer.org/)
+```php
+composer require bmstanley/indefinite-article
+composer update
 ```
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/bmstanley/php-indefinite-article"
-  }
-],
-"require": {
-  "bmstanley/indefinite-article": "^1.0"
-},
-```
-
-Run `composer install` to download and install the repository
 
 ## Usage
 
