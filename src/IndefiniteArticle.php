@@ -60,7 +60,7 @@ class IndefiniteArticle
             return $input;
         }
 
-        $result = self::_indefinite_article($word);
+        $result = self::indefinite_article($word);
 
         return $pre . $result . $post;
     }
@@ -72,7 +72,7 @@ class IndefiniteArticle
      *
      * @return string       Original word prefixed with 'a' or 'an'
      */
-    private static function _indefinite_article($word): string
+    public static function indefinite_article($word): string
     {
         // numbers starting with a '1' are trickier, only use 'an' if there are
         // 3, 6, 9, … digits after the 11 or 18

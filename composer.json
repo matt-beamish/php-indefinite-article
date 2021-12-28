@@ -1,5 +1,5 @@
 {
-  "name": "bmstanley/indefinite-article",
+  "name": "matt-beamish/indefinite-article",
   "description":"Grammatical utility class for prepending the appropriate indefinite article to a word (a/an)",
   "keywords":[
     "php",
@@ -11,6 +11,10 @@
     {
       "name": "Brian Stanley",
       "email": "bmstanley87@gmail.com"
+    },
+    {
+      "name": "Matt Beamish",
+      "email": "matt.beamish@gmail.com"
     }
   ],
   "autoload": {
