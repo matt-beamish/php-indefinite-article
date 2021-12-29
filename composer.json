@@ -27,6 +27,6 @@
   },
   "require-dev": {
     "nilportugues/php_backslasher": "^1.1",
-    "phpunit/phpunit": "~6.0"
+    "phpunit/phpunit": ">=6.0"
   }
 }
