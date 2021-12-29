@@ -89,7 +89,7 @@ class IndefiniteArticle
             }
         }
 
-        // not sure, so guess 'a'
+        // not sure, so guess 'a' 
         return self::A . ' ' . $word;
     }
 }
